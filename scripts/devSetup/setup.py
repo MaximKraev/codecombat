@@ -41,7 +41,7 @@ def check_if_root():
 
 if __name__ == u"__main__":
     print("Code Combat Development Environment Setup Script")
-    check_if_root()
+#    check_if_root()
     setup = factories.constructSetup()
     setup.setup()
 
