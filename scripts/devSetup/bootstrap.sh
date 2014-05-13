@@ -1,6 +1,6 @@
 #!/bin/bash
 
-repositoryUrl=${1:-https://github.com/codecombat/codecombat.git}
+repositoryUrl=${1:-https://github.com/MaximKraev/codecombat.git}
 deps=( git python )
 NODE_VERSION=v0.10
 function checkDependencies { #usage: checkDependencies [name of dependency array] [name of error checking function]
@@ -60,5 +60,5 @@ if command -v node >/dev/null 2>&1; then
 fi
 #install git repository
 git clone $repositoryUrl coco
-#python ./coco/scripts/devSetup/setup.py
-echo "Now copy and paste 'sudo python ./coco/scripts/devSetup/setup.py' into the terminal!"
+python ./coco/scripts/devSetup/setup.py
+#echo "Now copy and paste 'sudo python ./coco/scripts/devSetup/setup.py' into the terminal!"

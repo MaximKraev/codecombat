@@ -87,6 +87,6 @@ if not mongo_executable:
 mongo_db_path = os.path.abspath(os.path.join(current_directory,os.pardir)) + os.sep + u"mongo"
 if not os.path.exists(mongo_db_path):
     os.mkdir(mongo_db_path)
-mongo_arguments = [mongo_executable + u" --setParameter textSearchEnabled=true --dbpath=" + mongo_db_path]
+mongo_arguments = [mongo_executable + u" --setParameter textSearchEnabled=true --smallfiles --dbpath=" + mongo_db_path]
 call(mongo_arguments,shell=True)
 
